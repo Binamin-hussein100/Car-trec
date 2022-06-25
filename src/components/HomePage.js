@@ -1,10 +1,9 @@
 import React from "react";
-import Navbar from "./Navbar";
 
 function Homepage() {
   return (
     <div id="grandmaster">
-        <Navbar/>
+      
         <div id="master">
             <h1>
                 Car-Treck
