@@ -4,16 +4,19 @@ function Cars(){
     const [cars, setCars] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:3000/cars')
+        fetch('https://cartrecapi.herokuapp.com/cars')
         .then((res)=>res.json())
-        .then((data)=>console.log((data)))
-        .then((data)=>setCars(data))
+        .then((data)=>{
+            console.log(data)
+            setCars(data)})
     },[])
     return (
         <div>
             <h1>Master</h1>
             <li>
-                {cars.forEach((item)=>console.log(item))}
+                {/* {cars.forEach((item)=>{
+
+                })} */}
             </li>
         </div>
     )
