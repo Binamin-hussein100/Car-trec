@@ -5,13 +5,15 @@ import Homepage from "./components/HomePage";
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Cars from './components/Cars';
+import './index.css';
+
 
 
 function App() {
   return (    
-        <>
+        <div id="grandmaster">
           <Navbar/>
-          <div>
+          <div id='motherPage'>
             <Switch>
               <Route exact path="/">
                   <Homepage/>
@@ -24,7 +26,7 @@ function App() {
               </Route>
             </Switch>
           </div>      
-      </>      
+      </div>      
       
   )
 }
