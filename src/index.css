@@ -15,7 +15,7 @@ code {
 
 #grandmaster{
   background-color: rgba(255, 23, 23, 0.2);
-  height: 100vh;
+  height: auto;
 }
 
 
@@ -66,11 +66,11 @@ nav a {
 #master{
   text-align: center;
   align-items: center;
-  width: 70%;
-  background-color: rgba(29, 26, 26, 0.4);
+  width: 85%;
   margin: auto;
-  margin-top: 7%;
-  height: 60vh;
+  margin-top: 4%;
+  height: auto;
+  padding: 6%;
   /* border:solid rgb(112, 73, 73); */
   border-radius: 3% 3%;
   box-shadow: -5px 3px 10px 3px rgba(77, 75, 75, 0.363);
@@ -84,4 +84,34 @@ nav a {
 
 nav{
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.ginda{
+  padding: 1%;
+  width: 90%;
+  border: 1px #0f0f0f;
+  border-radius: 10%;
+  height: 70%;
+
+  
+ border-radius: 1rem;
+ transition: all 0.4s ease-in;
+ box-shadow: 0.4rem 0.4rem 0.6rem #00000040;
+ 
+}
+
+.ginda:hover{
+  transform: translateY(-1.5rem);
+  border: #dd7a1df0 0.2em solid;
+  border-radius: 2.5rem 0 2.5rem 0;
+}
+
+#gari{
+  display: flex;
+  width: 100%;
+}
+
+#ninja{
+  font-size: xx-large;
+  font-weight: bolder;
 }

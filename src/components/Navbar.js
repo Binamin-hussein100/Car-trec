@@ -5,13 +5,13 @@ import {NavLink} from 'react-router-dom'
 function Navbar(){
     return (
         <nav>
-            <div class="logo">
+            <div className="logo">
                 <NavLink to='/'>
                     CarTrec
                 </NavLink>                
             </div>
 
-            <div class="links">
+            <div className="links">
                <NavLink to="/cars" >Cars</NavLink>
                <NavLink to='/about'>About us</NavLink>
             </div>

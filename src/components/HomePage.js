@@ -1,19 +1,21 @@
 import React from "react";
-import pic1 from "/home/binamin/Desktop/Car-treck/car-treck/src/statics/1968 Dodge Charger.jpeg"
+import pic1 from "../Premium_Vector___Modern_and_sport_car_illustration-removebg-preview.png"
 
 function Homepage() {
   return (
     <div >
       
         <div id="master">
-            <h1>
-                Car-Treck
-            </h1>
-            <div>
-                <img src="src/statics/1968 Dodge Charger.jpeg" alt="cartreck1"/>
-                <img src="car-treck/src/statics/Car Porn™ on Twitter.jpeg" alt="cartreck2"/>
-                <img src="car-treck/src/statics/Premium Vector _ Modern and sport car illustration.jpeg" alt="cartreck3"/>
-
+            
+            <div id="gari">
+                <div>
+                  <img className="ginda" src={pic1} alt="cartreck1"/>            
+                </div>
+                <div>
+                    <h1 id="ninja">
+                        Car-Treck
+                    </h1>
+                </div>
             </div>
         </div>
     </div>
