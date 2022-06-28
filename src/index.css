@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(48, 43, 43, 0.5);
 }
 
 code {
@@ -13,7 +14,8 @@ code {
 }
 
 #grandmaster{
-  background-color: rgba(150, 150, 150,0.5);
+  background-color: rgba(255, 23, 23, 0.2);
+  height: 100vh;
 }
 
 
@@ -62,12 +64,24 @@ nav a {
 }
 
 #master{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-  /* ncnc */
-  background-color: #f2eeee;
-  
+  text-align: center;
+  align-items: center;
+  width: 70%;
+  background-color: rgba(29, 26, 26, 0.4);
+  margin: auto;
+  margin-top: 7%;
+  height: 60vh;
+  /* border:solid rgb(112, 73, 73); */
+  border-radius: 3% 3%;
+  box-shadow: -5px 3px 10px 3px rgba(77, 75, 75, 0.363);
+    -webkit-box-shadow: -5px 3px 20px 5px rgba(92, 92, 92, 0.363);
+    -moz-box-shadow: -5px 3px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* #motherPage{
+  background-color: #0f0f0f;
+} */
+
+nav{
+  background-color: rgba(0, 0, 0, 0.2);
 }
