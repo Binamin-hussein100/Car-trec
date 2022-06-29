@@ -17,7 +17,7 @@ function App() {
           <Navbar/>
           <div id='motherPage'>
             <Switch>
-              <Route exact path="/">
+              <Route exact path="">
                   <Homepage/>
               </Route>
               <Route exact path="/about">
