@@ -13,7 +13,7 @@ function Navbar(){
 
             <div className="links">
                <NavLink to="/cars" >Cars</NavLink>
-               <NavLink to='/about'>About us</NavLink>
+               <NavLink to='/about'>Add A CAR</NavLink>
             </div>
         
         </nav>
