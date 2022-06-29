@@ -20,10 +20,10 @@ function App() {
               <Route exact path="/">
                   <Homepage/>
               </Route>
-              <Route exact path="/about">
+              <Route  path="/about">
                   <About/>
               </Route>
-              <Route exact path="/cars">
+              <Route  path="/cars">
                   <Cars cars={cars} setCars = {setCars}/>
               </Route>
             </Switch>
