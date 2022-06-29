@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from "react";
 import './App.css';
 import { Route, Switch } from "react-router-dom";
 import Homepage from "./components/HomePage";
@@ -10,6 +10,8 @@ import './index.css';
 
 
 function App() {
+  const [cars, setCars] = useState([])
+
   return (    
         <div id="grandmaster">
           <Navbar/>
@@ -22,7 +24,7 @@ function App() {
                   <About/>
               </Route>
               <Route exact path="/cars">
-                  <Cars/>
+                  <Cars cars={cars} setCars = {setCars}/>
               </Route>
             </Switch>
           </div>      
