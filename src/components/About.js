@@ -1,8 +1,59 @@
-import React from "react";
+import React,{useState} from "react";
 
-function About(){
+function About({cars,setCars}){
+    
+    const [name,setName] = useState("")
+
+    // function submitForm(e){
+    //     e.preventDefault()
+    //     const formData = {
+    //         model:model,
+    //     }
+
+    // }
+
     return(
-        <h1>About cars</h1>
+        <div>
+            <div id="formy">
+                {/* <form>
+                    <label>
+                        <input
+                        type="text"
+                        name="cname"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        />
+                        <input
+                            type="text"
+                            name="model"
+                            value={model}
+                            onChange={(e) => setName(e.target.value)}
+                            />
+                        <input
+                        type="number"
+                        name="modelYear"
+                        value={modelYear}
+                        onChange={(e) => setName(e.target.value)}
+                        />
+
+                        <input
+                            type="text"
+                            name="pic"
+                            value={pic}
+                            onChange={(e) => setName(e.target.value)}
+                            />
+                        
+                        <input
+                            type="number"
+                            name="price"
+                            value={price}
+                            onChange={(e) => setName(e.target.value)}
+                            />
+                        
+                    </label>
+                </form> */}
+            </div>
+        </div>
     )
 }
 
