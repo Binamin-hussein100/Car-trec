@@ -1,12 +1,13 @@
 import React,{useState} from "react";
 import './App.css';
-import { Route, Switch } from "react-router-dom";
+// import { Route, Switch } from "react-router-dom";
 import Homepage from "./components/HomePage";
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Cars from './components/Cars';
 import './index.css';
 
+import { Routes, Route, Link } from "react-router-dom";
 
 
 function App() {
@@ -15,19 +16,14 @@ function App() {
   return (    
         <div id="grandmaster">
           <Navbar/>
-          <div id='motherPage'>
-            <Switch>
-              <Route exact path="/">
-                  <Homepage/>
-              </Route>
-              <Route  path="/about">
-                  <About/>
-              </Route>
-              <Route  path="/cars">
-                  <Cars cars={cars} setCars = {setCars}/>
-              </Route>
-            </Switch>
-          </div>      
+          <Routes>
+          
+              <Route  path="/" element={<Homepage/>}/>
+              <Route  path="/about" element={<About />}/>
+              <Route  path="/cars" element={<Cars cars={cars} setCars = {setCars}/>}/>
+           
+          </Routes>
+            
       </div>      
       
   )
