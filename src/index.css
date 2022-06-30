@@ -15,7 +15,7 @@ code {
 
 #grandmaster{
   background-color: rgba(255, 23, 23, 0.2);
-  height: 100vh;
+  height: auto;
 }
 
 
@@ -169,6 +169,7 @@ nav{
 #display{
   display: flex;
   padding: 5%;
+  margin: 2%;
   width: 50%;
   background-color: rgba(54, 54, 51, 0.137);
 
@@ -184,9 +185,10 @@ nav{
   box-shadow: 2px 2px 15px #000000f8 inset;
 }
 
-/* #display2{
-  background-color: white;
-} */
+#display2{
+  padding: 2%;
+  height: auto;
+}
 
 ul{
  list-style: none; 
