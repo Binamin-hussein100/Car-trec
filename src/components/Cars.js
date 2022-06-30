@@ -1,5 +1,7 @@
 import React,{useState,useEffect} from "react";
 import { Button } from 'react-bootstrap';
+import pic1 from "../Premium_Vector___Modern_and_sport_car_illustration-removebg-preview.png"
+
 
 
 function Cars({cars,setCars}){
@@ -21,7 +23,7 @@ function Cars({cars,setCars}){
                 <li key={car.id}> 
                     <div id="display">
                         <div className="danger">
-                            <img src={car.pic} alt="car"/>
+                            <img src={pic1} alt="car"/>
                             
                         </div>
                         <div className="danger">
