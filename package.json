@@ -1,8 +1,8 @@
 {
   "name": "car-treck",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://binamin-hussein100.github.io/",
+  "private": false,
+  "homepage": "https://binamin-hussein100.github.io/Car-trec",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
