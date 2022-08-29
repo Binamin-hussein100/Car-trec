@@ -1,57 +1,87 @@
 import React,{useState} from "react";
 
-function About({cars,setCars}){
+function About(){
     
-    const [name,setName] = useState("")
+    const [car,setCar] = useState({
+        cname:"",
+        model: "",
+        modelYear:0,
+        pic:"",
+        price:0
+    })
 
-    // function submitForm(e){
-    //     e.preventDefault()
-    //     const formData = {
-    //         model:model,
-    //     }
+    const handleChange = (e) => {
+        setCar({
+            ...car,
+            [e.target.name] : e.target.value,   
+        })
+    }
 
-    // }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        fetch('https://cartrecapi.herokuapp.com/cars',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                cname:car.cname,
+                model: car.model,
+                modelYear: car.modelYear,
+                pic: car.pic,
+                price: car.price,
+
+            })
+
+        })
+    }
 
     return(
         <div>
             <div id="formy">
-                {/* <form>
-                    <label>
+                <form onSubmit={handleSubmit}>
+                    <div>
                         <input
-                        type="text"
-                        name="cname"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                            type="text"
+                            name="cname"
+                            placeholder="name"
+                            value={car.cname}
+                            onChange={handleChange}
                         />
                         <input
                             type="text"
                             name="model"
-                            value={model}
-                            onChange={(e) => setName(e.target.value)}
-                            />
-                        <input
-                        type="number"
-                        name="modelYear"
-                        value={modelYear}
-                        onChange={(e) => setName(e.target.value)}
+                            placeholder="Model Name"
+                            value={car.model}
+                            onChange={handleChange}
                         />
-
                         <input
-                            type="text"
+                            type="month"
+                            name = "modelYear"
+                            placeholder="Model Year"
+                            value={car.modelYear}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="file"
                             name="pic"
-                            value={pic}
-                            onChange={(e) => setName(e.target.value)}
-                            />
-                        
+                            placeholder="Include Picture..."
+                            value={car.pic}
+                            onChange={handleChange}
+                        />
                         <input
                             type="number"
                             name="price"
-                            value={price}
-                            onChange={(e) => setName(e.target.value)}
-                            />
-                        
-                    </label>
-                </form> */}
+                            placeholder="Enter Price..."
+                            value={car.price}
+                            onChange={handleChange}
+                        />
+                        <button className="ui button" type="submit">
+          Add Car
+        </button>
+                    </div>
+
+                </form>
             </div>
         </div>
     )
