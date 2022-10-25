@@ -16,6 +16,14 @@ function Cars({cars,setCars}){
             setCars(data)})
     },[])
 
+    const handleDeleteCar = (id) => {
+        fetch(`https://cartrecapi.herokuapp.com/cars/${id}`,{
+            method: 'DELETE',
+        })
+        alert("Car successfully bought! You will recieve a account details in a day.")
+    }
+
+
     return (
         <div id="display2">
             <ul>
@@ -34,7 +42,7 @@ function Cars({cars,setCars}){
 
                             <a class="fancy" href="#">
                                 <span class="top-key"></span>
-                                <span class="text">Buy the Car</span>
+                                <span onClick={()=>handleDeleteCar(car.id)} class="text">Buy the Car</span>
                                 <span class="bottom-key-1"></span>
                                 <span class="bottom-key-2"></span>
                             </a>
