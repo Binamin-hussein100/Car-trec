@@ -1,4 +1,9 @@
 import React,{useState} from "react";
+import Form from 'react-bootstrap/Form';
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 function About(){
     
@@ -37,53 +42,38 @@ function About(){
     }
 
     return(
-        <div>
-            <div id="formy">
-                <form onSubmit={handleSubmit}>
-                    <div>
-                        <input
-                            type="text"
-                            name="cname"
-                            placeholder="name"
-                            value={car.cname}
-                            onChange={handleChange}
-                        />
-                        <input
-                            type="text"
-                            name="model"
-                            placeholder="Model Name"
-                            value={car.model}
-                            onChange={handleChange}
-                        />
-                        <input
-                            type="month"
-                            name = "modelYear"
-                            placeholder="Model Year"
-                            value={car.modelYear}
-                            onChange={handleChange}
-                        />
-                        <input
-                            type="file"
-                            name="pic"
-                            placeholder="Include Picture..."
-                            value={car.pic}
-                            onChange={handleChange}
-                        />
-                        <input
-                            type="number"
-                            name="price"
-                            placeholder="Enter Price..."
-                            value={car.price}
-                            onChange={handleChange}
-                        />
-                        <button className="ui button" type="submit">
-          Add Car
-        </button>
-                    </div>
+        <>
+            <Container id="formy" >
+                <Row>
+                    <Col sm={3}></Col>
 
-                </form>
-            </div>
-        </div>
+                    <Col sm={3}>
+                        <Form>
+                            <Form.Label>Car name:</Form.Label>
+                            <Form.Control placeholder="type" type="text"></Form.Control>
+                        </Form>
+                        <Form>
+                            <Form.Label>Car name:</Form.Label>
+                            <Form.Control placeholder="type" type="text"></Form.Control>
+                        </Form>
+                        <Form>
+                            <Form.Label>Car name:</Form.Label>
+                            <Form.Control placeholder="type" type="text"></Form.Control>
+                        </Form>
+                        <Form>
+                            <Form.Label>Car name:</Form.Label>
+                            <Form.Control placeholder="type" type="text"></Form.Control>
+                        </Form>
+                        <Form>
+                            <Form.Label>Car name:</Form.Label>
+                            <Form.Control placeholder="type" type="text"></Form.Control>
+                        </Form>
+                    </Col>
+
+                    <Col sm={3}></Col>
+                </Row>
+            </Container>
+        </>
     )
 }
 
