@@ -47,26 +47,30 @@ function About(){
                 <Row>
                     <Col sm={3}></Col>
 
-                    <Col sm={3}>
-                        <Form>
-                            <Form.Label>Car name:</Form.Label>
-                            <Form.Control placeholder="type" type="text"></Form.Control>
-                        </Form>
-                        <Form>
-                            <Form.Label>Car name:</Form.Label>
-                            <Form.Control placeholder="type" type="text"></Form.Control>
-                        </Form>
-                        <Form>
-                            <Form.Label>Car name:</Form.Label>
-                            <Form.Control placeholder="type" type="text"></Form.Control>
-                        </Form>
-                        <Form>
-                            <Form.Label>Car name:</Form.Label>
-                            <Form.Control placeholder="type" type="text"></Form.Control>
-                        </Form>
-                        <Form>
-                            <Form.Label>Car name:</Form.Label>
-                            <Form.Control placeholder="type" type="text"></Form.Control>
+                    <Col id="from" sm={3}>
+                        <Form onSubmit={handleSubmit}>
+                            <Form.Group>
+                                <Form.Label>Car name:</Form.Label>
+                                <Form.Control  value={car.cname} placeholder="eg Mazda" type="text" onChange={handleChange}></Form.Control>
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label>Model:</Form.Label>
+                                <Form.Control  value={car.model} onChange={handleChange} placeholder="eg Demio" type="text"></Form.Control>
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label>Year:</Form.Label>
+                                <Form.Control value={car.modelYear} onChange={handleChange} placeholder="Eg 2014" type="year"></Form.Control>
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label>Pic:</Form.Label>
+                                <Form.Control  value={car.pic} onChange={handleChange} placeholder="Image" type="file"></Form.Control>
+                            </Form.Group> 
+                            <Form.Group>
+                                <Form.Label>Price:</Form.Label>
+                                <Form.Control  value={car.price} onChange={handleChange} placeholder="type" type="number"></Form.Control>
+                            </Form.Group>            
+                          <Button className="btn35" type="submit" variant="outline-dark">Add car</Button>                                           
+                            
                         </Form>
                     </Col>
 
