@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from "react";
-import { Button } from 'react-bootstrap';
 import pic1 from "../Premium_Vector___Modern_and_sport_car_illustration-removebg-preview.png"
 
 
@@ -14,19 +13,19 @@ function Cars({cars,setCars}){
         .then((data)=>{
             console.log(data)
             setCars(data)})
-    },[])
+       
+    },[cars])
 
     const handleDeleteCar = (id) => {
         fetch(`https://cartrecapi.herokuapp.com/cars/${id}`,{
             method: 'DELETE',
         })
-        alert("Car successfully bought! You will recieve a account details in a day.")
-    }
+    }   
 
 
     return (
         <div id="display2">
-            <ul>
+            <ul id="listyy">
                 { cars?.map(car => (
                 <li key={car.id}> 
                     <div id="display">

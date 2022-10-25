@@ -168,9 +168,8 @@ nav{
 
 #display{
   display: flex;
-  padding: 5%;
+  padding: 2%;
   margin: 2%;
-  width: 50%;
   background-color: rgba(54, 54, 51, 0.137);
 
   border-radius: 1rem;
@@ -317,4 +316,7 @@ ul{
 
  }
  
- 
+ #listyy{
+  display: flex;
+  flex-wrap: wrap;
+ }

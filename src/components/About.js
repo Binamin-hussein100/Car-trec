@@ -4,9 +4,11 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { useNavigate} from "react-router-dom"
 
 function About(){
-    
+    let navigate = useNavigate()
+
     const [car,setCar] = useState({
         cname:"",
         model: "",
@@ -39,6 +41,8 @@ function About(){
             })
 
         })
+        navigate("/cars")
+        
     }
 
     return(
@@ -51,23 +55,23 @@ function About(){
                         <Form onSubmit={handleSubmit}>
                             <Form.Group>
                                 <Form.Label>Car name:</Form.Label>
-                                <Form.Control  value={car.cname} placeholder="eg Mazda" type="text" onChange={handleChange}></Form.Control>
+                                <Form.Control name="cname"  value={car.cname} placeholder="eg Mazda" type="text" onChange={handleChange}></Form.Control>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Model:</Form.Label>
-                                <Form.Control  value={car.model} onChange={handleChange} placeholder="eg Demio" type="text"></Form.Control>
+                                <Form.Control name="model"  value={car.model} onChange={handleChange} placeholder="eg Demio" type="text"></Form.Control>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Year:</Form.Label>
-                                <Form.Control value={car.modelYear} onChange={handleChange} placeholder="Eg 2014" type="year"></Form.Control>
+                                <Form.Control name="modelYear" value={car.modelYear} onChange={handleChange} placeholder="Eg 2014" type="year"></Form.Control>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Pic:</Form.Label>
-                                <Form.Control  value={car.pic} onChange={handleChange} placeholder="Image" type="file"></Form.Control>
+                                <Form.Control name="pic"  value={car.pic} onChange={handleChange} placeholder="Image" type="file"></Form.Control>
                             </Form.Group> 
                             <Form.Group>
                                 <Form.Label>Price:</Form.Label>
-                                <Form.Control  value={car.price} onChange={handleChange} placeholder="type" type="number"></Form.Control>
+                                <Form.Control name="price" value={car.price} onChange={handleChange} placeholder="type" type="number"></Form.Control>
                             </Form.Group>            
                           <Button className="btn35" type="submit" variant="outline-dark">Add car</Button>                                           
                             
